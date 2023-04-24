@@ -28,6 +28,12 @@ Scenario: Testing a template
         And I search the term Desktop Test
         And I click on the document that appears
         Then I will be able to enter text into the page
+        
+        Scenario: Testing a template Fail
+          Given I have opened the Excel app
+          When I select New
+          And I click Simple Gantt Chart from the templates
+          Then the title will be "GanttProjectplanner-22".
 
 
 

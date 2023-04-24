@@ -9,7 +9,9 @@ import org.junit.runner.RunWith;
     @RunWith(Cucumber.class)
 
     @CucumberOptions(features="src/test/resources/Feature",
-            glue= {"DesktopFramework/stepdefinitions", "DesktopFramework/AppHooks"})
+            glue= {"DesktopFramework/stepdefinitions", "DesktopFramework/AppHooks"},
+            plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+
     public class DesktopRunner {
 
 }

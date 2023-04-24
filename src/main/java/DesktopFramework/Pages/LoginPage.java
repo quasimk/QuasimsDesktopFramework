@@ -86,7 +86,7 @@ public class LoginPage {
         getDriver().findElement(DocumentName).click();
     }
     public void clickingBlankCell(){
-        getDriver().findElement(BlankCell).sendKeys("fELLELO LOSHER");
+        getDriver().findElement(BlankCell).sendKeys("Testerrrr");
     }
 
 

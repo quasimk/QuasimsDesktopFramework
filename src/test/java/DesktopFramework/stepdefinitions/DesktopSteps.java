@@ -17,7 +17,7 @@ public class DesktopSteps {
     @Given("I have opened the Excel app")
     public void iHaveOpenedTheExcelApp() throws InterruptedException {
 //        loginPage.clickMaximise();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @When("I select New")
@@ -33,8 +33,9 @@ public class DesktopSteps {
     }
 
     @Then("the title will be {string}.")
-    public void theTitleWillBe(String text) {
+    public void theTitleWillBe(String text) throws InterruptedException {
         loginPage.CheckGanttChart(text);
+        Thread.sleep(2000);
     }
 
 
@@ -108,3 +109,5 @@ public class DesktopSteps {
         loginPage.clickingBlankCell();
     }
 }
+
+
