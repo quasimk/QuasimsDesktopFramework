@@ -1,6 +1,5 @@
 package DesktopFramework.stepdefinitions;
-
-import DesktopFramework.Pages.LoginPage;
+import DesktopFramework.Pages.homepage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,7 +9,7 @@ import org.junit.Assert;
 public class DesktopSteps {
 
 
-    LoginPage loginPage = new LoginPage();
+    homepage homepage = new homepage();
 
 
 
@@ -20,93 +19,89 @@ public class DesktopSteps {
         Thread.sleep(3000);
     }
 
-    @When("I select New")
+    @When("I have selected New")
     public void iSelect() {
-        loginPage.clickNew();
+       homepage.clickNew();
 
     }
 
     @And("I click Simple Gantt Chart from the templates")
     public void iClickFromTheTemplates() throws InterruptedException {
-        loginPage.ClickGanttChart();
+        homepage.clickGanttChart();
 
     }
 
     @Then("the title will be {string}.")
     public void theTitleWillBe(String text) throws InterruptedException {
-        loginPage.CheckGanttChart(text);
+        homepage.checkGanttChart(text);
         Thread.sleep(2000);
     }
 
 
-    @When("I select a new Gantt Chart")
+    @When("I have selected a new Gantt Chart")
     public void iSelectNewGanttChart() {
-        loginPage.clickNew();
-        loginPage.ClickGanttChart();
+        homepage.clickNew();
+        homepage.clickGanttChart();
 
     }
 
     @And("I click help from the title bar")
     public void iClickHelpFromTheTitleBar() {
-        loginPage.clickHelpTab();
+        homepage.clickHelpTab();
     }
 
     @And("I click the Contact Support icon")
     public void iClickTheContactSupportIcon() {
-        loginPage.clickContactSupport();
+        homepage.clickContactSupport();
 
     }
 
     @Then("the get help button will appear on the right hand side of the page")
     public void theGetHelpButtonWillAppearOnTheRightHandSideOfThePage() {
-        loginPage.verifyGetHelpButton();
+        homepage.verifyGetHelpButton();
     }
 
-    @When("I Select the account option")
+    @When("I have selected the account option")
     public void iSelectTheAccountOption() {
-        loginPage.clickFile();
-        loginPage.clickAccountButton();
+        homepage.clickFile();
+        homepage.clickAccountButton();
 
     }
 
-    @Then("my name will appear under User Information")
-    public void myNameWillAppearUnderUserInformation() {
-//        loginPage.verifyName();
-    }
 
     @Then("my {string} will appear under User Information")
     public void myWillAppearUnderUserInformation(String name) {
-        loginPage.verifyName(name);
+        homepage.verifyName(name);
     }
 
-    @When("I click file")
+    @When("I have clicked the file button")
     public void iClickFile() {
-        loginPage.clickFile();
+        homepage.clickFile();
         
     }
 
     @And("open")
     public void open() {
-        loginPage.clickOpen();
+        homepage.clickOpen();
         
     }
 
     @And("I search the term Desktop Test")
     public void iSearchTheTermDESKTOPTEST() {
-        loginPage.SearchingAFile();
+        homepage.searchingAFile();
         
     }
 
     @And("I click on the document that appears")
     public void iClickOnTheDocumentThatAppears() {
-        loginPage.clickingAfile();
+        homepage.clickingAfile();
 
     }
 
 
     @Then("I will be able to enter text into the page")
     public void iWillBeAbleToEnterTextIntoThePage() {
-        loginPage.clickingBlankCell();
+        homepage.clickingBlankCell();
     }
 }
 
